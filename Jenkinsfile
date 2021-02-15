@@ -9,8 +9,9 @@ pipeline{
        }
     }
     stage('get the checkout id'){
+      steps {
      sh 'echo $GIT_COMMIT' 
-      
+      }
     }
     
   }
