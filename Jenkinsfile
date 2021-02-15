@@ -38,10 +38,6 @@ pipeline{
         try{
         sh "Both checkout version are different" 
         }
-          catch (Throwable e){
-            echo "Caught ${e.toString()}"
-            currentBuild.result = "SUCCESS"
-          }
         }
       }
     }
