@@ -16,10 +16,24 @@ pipeline{
         }   
       }
     }
-     stage('code'){
+     stage('Build Comparision'){
+       when {
+         expression{
+         Test == Test1
+         }
+       }
       steps {
-        sh "echo ${Test}" 
-        sh "echo ${Test1}"
+        sh "Both checkout version are same" 
+      }
+    }
+     stage('Build Comparision 2'){
+       when {
+         expression{
+         Test != Test1
+         }
+       }
+      steps {
+        sh "Both checkout version are different" 
       }
     }
     
