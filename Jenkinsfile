@@ -11,6 +11,9 @@ pipeline{
     stage('get the checkout id'){
       steps {
      sh 'echo $GIT_COMMIT' 
+     sh 'echo $GIT_PREVIOUS_COMMIT' 
+      sh 'echo $GIT_PREVIOUS_SUCCESSFUL_COMMIT' 
+      sh 'echo $GIT_LAST_COMMIT'   
       }
     }
     
