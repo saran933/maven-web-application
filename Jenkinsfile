@@ -4,7 +4,7 @@ pipeline{
   
   environment {
     ENV_NAME = "${env.GIT_COMMIT}"
-    ENV_NAME1 = $GIT_COMMIT
+    ENV_NAME1 = "$GIT_COMMIT"
   }
   
   stages{
