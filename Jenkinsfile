@@ -34,9 +34,7 @@ pipeline{
        }
  
       steps {
-        script {
-            sh "Both checkout version are different" 
-                }
+        echo "Both checkputs are differenet"
       }
     }
     
