@@ -12,12 +12,14 @@ pipeline{
       steps {
         script {
            Test = sh(returnStdout: true, script: 'echo $GIT_COMMIT')
+           Test1 = sh(returnStdout: true, script: 'echo $GIT_PREVIOUS_SUCCESSFUL_COMMIT')
         }   
       }
     }
      stage('code'){
       steps {
         sh "echo ${Test}" 
+        sh "echo ${Test1}"
       }
     }
     
