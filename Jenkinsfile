@@ -37,6 +37,11 @@ pipeline{
         echo "Both checkputs are differenet and proceeding for the next stages"
       }
     }
+    stage('Checkout code') {
+       steps{
+       sh 'git rev-parse FETCH_HEAD'
+       }
+    }
     
   }
   
