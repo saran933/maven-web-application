@@ -34,7 +34,7 @@ pipeline{
        }
  
       steps {
-        echo "Both checkputs are differenet"
+        echo "Both checkputs are differenet and proceeding for the next stages"
       }
     }
     
