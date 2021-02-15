@@ -15,7 +15,7 @@ pipeline{
         }   
       }
     }
-     stage('get the checkout id'){
+     stage('code'){
       steps {
          sh 'echo $Test'  
       }
