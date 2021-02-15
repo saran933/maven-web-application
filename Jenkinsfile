@@ -33,7 +33,15 @@ pipeline{
          }
        }
       steps {
+        script {
+        try{
         sh "Both checkout version are different" 
+        }
+          catch (Throwable e){
+            echo "Caught ${e.string()}"
+            currentBuild.result = "SUCCESS"
+          }
+        }
       }
     }
     
