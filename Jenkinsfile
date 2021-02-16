@@ -23,7 +23,7 @@ pipeline{
          }
        }
       steps {
-        sh "Both checkout version are same" 
+        echo "Both checkout version are same" 
       }
     }
      stage('Build Comparision 2'){
